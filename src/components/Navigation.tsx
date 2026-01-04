@@ -24,13 +24,16 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      // FIX 1: Removed "right-0" and added "w-full"
+      // This stops it from stretching behind the scrollbar
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-lg border-b border-border"
           : "bg-transparent"
       }`}
     >
-      <div className="container px-4 md:px-6">
+      {/* FIX 2: Swapped "container" for "max-w-7xl mx-auto" to match your Footer's safety width */}
+      <div className="max-w-7xl mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2 font-display font-bold text-xl">

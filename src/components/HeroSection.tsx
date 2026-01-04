@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container bottom-8 relative z-10 px-4 md:px-6">
+      <div className="container top-5 bottom-8 relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Profile Photo */}
           <div className="flex justify-center animate-fade-in">
@@ -83,7 +83,7 @@ const HeroSection = () => {
           </div>
 
           {/* Tech stack icons */}
-          <div className="pt-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <div className="pt-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
               {/*<p className="text-sm text-muted-foreground mb-4">Powered by</p>*/}
             <div className="flex items-center justify-center gap-6 md:gap-10 opacity-60">
               <div className="flex flex-col items-center gap-2">
@@ -112,7 +112,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 rounded-full border-2 border-muted-foreground/30 flex justify-center pt-2">
           <div className="w-1 h-2 rounded-full bg-primary" />
         </div>
