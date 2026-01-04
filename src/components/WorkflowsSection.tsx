@@ -104,7 +104,7 @@ const WorkflowsSection = () => {
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <a href="#contact">
-                Discuss Your Automation Needs with Me
+                Discuss Your Automation Needs
                 <ArrowRight className="w-4 h-4" />
               </a>
             </Button>

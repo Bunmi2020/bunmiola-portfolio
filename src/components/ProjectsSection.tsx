@@ -110,7 +110,7 @@ const ProjectsSection = () => {
           <div className="text-center mt-12">
             <Button variant="outline" size="lg" asChild>
               <a href="#contact">
-                Discuss Your Website Needs with Me
+                Discuss Your Website Needs
                 <ArrowRight className="w-4 h-4" />
               </a>
             </Button>
