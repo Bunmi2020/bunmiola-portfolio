@@ -1,4 +1,4 @@
-import { Award, Users, Code, Briefcase } from "lucide-react";
+import { Award, Users, Code, Briefcase, GraduationCap } from "lucide-react";
 
 const stats = [
   {
@@ -24,6 +24,13 @@ const stats = [
     label: "Background",
     value: "Mining Engineering",
     color: "text-primary",
+  },
+  {
+    icon: GraduationCap,
+    label: "N8N Expert",
+    value: "Teaching & Development",
+    color: "text-secondary",
+    link: "https://www.fiverr.com/users/sam_bee01",
   },
 ];
 
@@ -62,17 +69,39 @@ const AboutSection = () => {
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="tech-border rounded-xl p-6 card-glow"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  <stat.icon className={`w-8 h-8 ${stat.color} mb-4`} />
-                  <p className="text-sm text-muted-foreground mb-1">{stat.label}</p>
-                  <p className="font-display font-semibold text-foreground">{stat.value}</p>
-                </div>
-              ))}
+              {stats.map((stat, index) => {
+                const content = (
+                  <>
+                    <stat.icon className={`w-8 h-8 ${stat.color} mb-4`} />
+                    <p className="text-sm text-muted-foreground mb-1">{stat.label}</p>
+                    <p className="font-display font-semibold text-foreground">{stat.value}</p>
+                    {stat.link && (
+                      <p className="text-xs text-primary mt-2">View on Fiverr →</p>
+                    )}
+                  </>
+                );
+                
+                return stat.link ? (
+                  <a
+                    key={index}
+                    href={stat.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="tech-border rounded-xl p-6 card-glow hover:border-primary/50 transition-colors"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {content}
+                  </a>
+                ) : (
+                  <div
+                    key={index}
+                    className="tech-border rounded-xl p-6 card-glow"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {content}
+                  </div>
+                );
+              })}
             </div>
           </div>
         </div>
