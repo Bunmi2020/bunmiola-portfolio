@@ -1,4 +1,4 @@
-import { ExternalLink, Rocket, Film, Car, Music, Utensils } from "lucide-react";
+import { ExternalLink, Rocket, Film, Car, Music, Utensils, ArrowRight} from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const startupSpotlight = {
@@ -104,6 +104,16 @@ const ProjectsSection = () => {
                 <ExternalLink className="w-4 h-4 text-muted-foreground mt-4 group-hover:text-primary transition-colors" />
               </a>
             ))}
+          </div>
+
+          {/* CTA */}
+          <div className="text-center mt-12">
+            <Button variant="outline" size="lg" asChild>
+              <a href="#contact">
+                Discuss Your Website Needs with Me
+                <ArrowRight className="w-4 h-4" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import { Mail, Linkedin, Github, Twitter, MapPin } from "lucide-react";
+import { SiFiverr } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 
 const FiverrIcon = () => (
@@ -24,7 +25,7 @@ const socialLinks = [
     label: "X (Twitter)",
   },
   {
-    icon: FiverrIcon,
+    icon: SiFiverr,
     url: "https://www.fiverr.com/users/sam_bee01",
     label: "Fiverr",
   },
@@ -91,7 +92,7 @@ const FooterSection = () => {
               © {new Date().getFullYear()} Bunmi Oladipupo. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground/60 mt-2">
-              Built with React • Designed with 💚
+              Built with React • Designed with Tailwind CSS
             </p>
           </div>
         </div>

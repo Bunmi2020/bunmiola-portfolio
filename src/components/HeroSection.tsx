@@ -26,7 +26,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="container relative z-10 px-4 md:px-6">
+      <div className="container bottom-8 relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Profile Photo */}
           <div className="flex justify-center animate-fade-in">
@@ -84,7 +84,7 @@ const HeroSection = () => {
 
           {/* Tech stack icons */}
           <div className="pt-12 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-            <p className="text-sm text-muted-foreground mb-4">Powered by</p>
+              {/*<p className="text-sm text-muted-foreground mb-4">Powered by</p>*/}
             <div className="flex items-center justify-center gap-6 md:gap-10 opacity-60">
               <div className="flex flex-col items-center gap-2">
                 <div className="w-12 h-12 rounded-lg tech-border flex items-center justify-center">
