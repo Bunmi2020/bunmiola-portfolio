@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Workflow, Zap, Code, Bot } from "lucide-react";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const HeroSection = () => {
   return (
@@ -27,14 +28,30 @@ const HeroSection = () => {
 
       <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center space-y-8">
+          {/* Profile Photo */}
+          <div className="flex justify-center animate-fade-in">
+            <div className="relative">
+              <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-2 border-primary/50 shadow-lg shadow-primary/20">
+                <img 
+                  src={profilePhoto} 
+                  alt="Bunmi Oladipupo" 
+                  className="w-full h-full object-cover object-top"
+                />
+              </div>
+              <div className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-primary flex items-center justify-center">
+                <span className="w-3 h-3 rounded-full bg-background animate-pulse" />
+              </div>
+            </div>
+          </div>
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full tech-border text-sm text-muted-foreground animate-fade-in">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full tech-border text-sm text-muted-foreground animate-fade-in" style={{ animationDelay: '0.05s' }}>
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             Available for Projects
           </div>
 
           {/* Main headline */}
-          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          <h1 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold leading-tight animate-fade-in" style={{ animationDelay: '0.15s' }}>
             Hi, I'm{" "}
             <span className="text-gradient">Bunmi Oladipupo</span>
             <br />
