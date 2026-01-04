@@ -1,6 +1,12 @@
 import { Mail, Linkedin, Github, Twitter, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const FiverrIcon = () => (
+  <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+    <path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092v2.466h-1.61v-3.558h-.684c-.547 0-.84.41-.84 1.092v2.466h-1.61v-4.874h1.61v.74c.264-.574.626-.74 1.163-.74h1.972v.74c.264-.574.625-.74 1.162-.74h1.527v1.316zm-6.786 1.501h-3.359c.088.546.48.886 1.006.886.4 0 .71-.15.928-.44l1.327.635c-.478.79-1.27 1.222-2.255 1.222-1.616 0-2.72-1.1-2.72-2.61s1.104-2.61 2.72-2.61c1.527 0 2.61 1.1 2.353 2.917zm-1.637-.974c-.087-.508-.457-.82-.97-.82-.503 0-.873.312-.96.82h1.93zm-5.92 2.936h-1.61v-3.558H4.43v-.647c0-.682.293-1.092.84-1.092h.79V8.468h1.61v1.316h1.134v1.316H7.67v3.558l-.004.004z" />
+  </svg>
+);
+
 const socialLinks = [
   {
     icon: Linkedin,
@@ -16,6 +22,11 @@ const socialLinks = [
     icon: Twitter,
     url: "https://x.com/b_to_lll",
     label: "X (Twitter)",
+  },
+  {
+    icon: FiverrIcon,
+    url: "https://www.fiverr.com/users/sam_bee01",
+    label: "Fiverr",
   },
 ];
 
