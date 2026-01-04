@@ -39,7 +39,7 @@ const AboutSection = () => {
     <section id="about" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent" />
       
-      <div className="container relative z-10 px-4 md:px-6">
+      <div className="container top-3 relative z-10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
           <div className="text-center mb-16">
