@@ -52,9 +52,9 @@ const AboutSection = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Bio content */}
             <div className="space-y-6">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+               <p className="text-lg text-muted-foreground leading-relaxed">
                 I am a <span className="text-foreground font-medium">versatile tech professional</span> with a unique background in Mining Engineering and Front-End Development. Currently, I specialize in{" "}
-                <span className="text-primary font-semibold">N8N Automation</span>, designing multi-step workflows, writing custom JavaScript/Python nodes, and teaching others how to build AI agents.
+                <span className="text-primary font-semibold">workflow automation</span>, designing multi-step workflows with tools like <span className="text-primary font-semibold">n8n</span> and <span className="text-secondary font-semibold">Contextual.io</span>, writing custom JavaScript/Python nodes, and teaching others how to build AI agents.
               </p>
               
               <p className="text-lg text-muted-foreground leading-relaxed">
