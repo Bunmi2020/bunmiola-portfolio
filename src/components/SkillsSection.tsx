@@ -5,7 +5,7 @@ const skillCategories = [
     icon: Workflow,
     title: "Automation",
     color: "primary",
-    skills: ["n8n (Advanced)", "AI Agents", "Webhooks", "API Integrations", "Custom Nodes"],
+    skills: ["n8n (Advanced)", "Contextual.io", "AI Agents", "Webhooks", "API Integrations", "Custom Nodes"],
   },
   {
     icon: Code,
