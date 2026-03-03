@@ -84,7 +84,7 @@ const HeroSection = () => {
             style={{ animationDelay: "0.2s" }}
           >
             <span className="text-primary font-medium">
-              N8N Automation Specialist
+              Automation Specialist
             </span>{" "}
             | <span className="text-secondary font-medium">Founder of goFIKO</span> |{" "}
             <span className="text-foreground font-medium">
