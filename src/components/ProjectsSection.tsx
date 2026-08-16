@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 const startupSpotlight = {
   name: "goFIKO",
   url: "https://gofiko.com",
-  description: "Building a React-based web app for education management. Leading a team of 12 teaching consultants.",
+  description: "Building a self-study EdTech platform. Leading a team of 12 teaching consultants.",
   role: "Founder & Lead Developer",
 };
 
