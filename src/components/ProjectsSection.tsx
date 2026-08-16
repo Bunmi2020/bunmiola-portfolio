@@ -9,12 +9,7 @@ const startupSpotlight = {
 };
 
 const projects = [
-  {
-    icon: Film,
-    name: "Valor Motion Pictures",
-    url: "https://valormotionpictures.com",
-    type: "Business Website",
-  },
+  
   {
     icon: Car,
     name: "Motoring Nigeria",
@@ -32,6 +27,12 @@ const projects = [
     name: "Ravenous",
     url: "https://github.com/Bunmi2020/ravenous",
     type: "Yelp Clone",
+  },
+  {
+    icon: Film,
+    name: "Valor Motion Pictures",
+    url: "https://valormotionpictures.com",
+    type: "Business Website",
   },
 ];
 
