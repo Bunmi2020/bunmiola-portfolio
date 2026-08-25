@@ -1,3 +1,4 @@
+import React from "react";
 import { ExternalLink, Rocket, Film, Car, Music, Utensils, ArrowRight} from "lucide-react";
 import { Button } from "@/components/ui/button";
 

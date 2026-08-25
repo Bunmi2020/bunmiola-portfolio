@@ -32,7 +32,7 @@ const socialLinks = [
 ];
 
 const emails = [
-  "hicon.sam@gmail.com",
+  "hello@bunmioladipupo.online",
   "bunmi@gofiko.com",
 ];
 
