@@ -1,6 +1,7 @@
 import { Mail, Linkedin, Github, Twitter, MapPin } from "lucide-react";
 import { SiFiverr } from "react-icons/si";
 import { Button } from "@/components/ui/button";
+import WorkflowBackground from "./WorkflowBackground";
 
 const FiverrIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
@@ -40,7 +41,7 @@ const FooterSection = () => {
   return (
     <footer id="contact" className="py-24 relative border-t border-border">
       <div className="absolute inset-0 hero-gradient opacity-50" />
-      
+      <WorkflowBackground />
       <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-4xl mx-auto text-center">
           {/* Heading */}

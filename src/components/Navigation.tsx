@@ -4,9 +4,8 @@ import { Button } from "@/components/ui/button";
 
 const navLinks = [
   { href: "#about", label: "About" },
-  { href: "#workflows", label: "Workflows" },
-  { href: "#training", label: "Training" },
-  { href: "#projects", label: "Projects" },
+  { href: "/automation", label: "Automation" },
+  { href: "/web-dev", label: "Web Dev" },
   { href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
@@ -53,7 +52,7 @@ const Navigation = () => {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-sm font-medium hover:text-foreground transition-colors"
               >
                 {link.label}
               </a>

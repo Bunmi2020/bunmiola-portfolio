@@ -137,17 +137,19 @@ const HeroSection = () => {
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+              
               <Button variant="hero" asChild>
-                <a href="#projects">
-                  <Code className="w-5 h-5" />
-                  Explore My Front-End Projects
+                <a href="/automation">
+                  <Bot className="w-5 h-5" />
+                  Explore my AI &amp; Automation Work
                   <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
               <Button variant="heroOutline" asChild>
-                <a href="#workflows">
-                  <Bot className="w-5 h-5" />
-                  Explore AI &amp; Automation
+                <a href="/web-dev">
+                  <Code className="w-5 h-5" />
+                  Explore My Front-End Work
+                  <ArrowRight className="w-4 h-4" />
                 </a>
               </Button>
             </div>

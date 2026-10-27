@@ -5,7 +5,7 @@ export const INTRO_STORAGE_KEY = "bunmi-intro-seen";
 
 const GREETING = "Hello, welcome to my world.";
 const SUBLINE =
-  "A journey through my professional and freelance work in development, AI, and automation.";
+  "A journey through my professional and freelance work in Web Development, AI, and Automation.";
 
 export const prefersReducedMotion = () =>
   typeof window !== "undefined" &&
@@ -38,7 +38,7 @@ const IntroSequence = ({ onComplete }: IntroSequenceProps) => {
       // Storage unavailable — the intro simply plays again next visit
     }
     setLeaving(true);
-    window.setTimeout(onComplete, 650);
+    window.setTimeout(onComplete, 850);
   };
 
   useEffect(() => {

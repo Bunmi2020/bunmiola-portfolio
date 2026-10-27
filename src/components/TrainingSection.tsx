@@ -1,5 +1,6 @@
 import { BookOpen, Users, Rocket, Target, Lightbulb, ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WorkflowBackground from "@/components/automation/WorkflowBackground";
 
 const trainingModules = [
   {
@@ -44,7 +45,7 @@ const TrainingSection = () => {
   return (
     <section id="training" className="py-24 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/30 to-transparent" />
-
+        <WorkflowBackground />
       <div className="container relative z-10 px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
@@ -52,7 +53,7 @@ const TrainingSection = () => {
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
               AI Training & <span className="text-gradient">Team Enablement</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-lg max-w-2xl mx-auto">
               I help teams and departments become AI-fluent and adopt agentic workflows — so they work smarter, move faster, and focus on what matters.
             </p>
           </div>
@@ -104,7 +105,7 @@ const TrainingSection = () => {
                   <h3 className="font-display text-xl font-bold text-foreground mb-3">
                     {module.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className=" leading-relaxed">
                     {module.description}
                   </p>
                 </div>
@@ -132,7 +133,7 @@ const TrainingSection = () => {
           {/* CTA */}
           <div className="text-center">
             <Button variant="outline" size="lg" asChild>
-              <a href="#contact">
+              <a href={`mailto:hello@bunmioladipupo.online`}>
                 Train Your Team on AI Workflows
                 <ArrowRight className="w-4 h-4" />
               </a>

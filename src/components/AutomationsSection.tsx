@@ -1,6 +1,7 @@
 import { useState } from "react";
-import { ShoppingCart, MessageSquare, Search, Brain, Database, Send, ArrowRight, Zap } from "lucide-react";
+import { ShoppingCart, MessageSquare, Search, Brain, Database, Send, ArrowRight, Zap, Bot } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import WorkflowBackground from "@/components/automation/WorkflowBackground";
 
 const n8nWorkflows = [
   {
@@ -26,6 +27,12 @@ const n8nWorkflows = [
     title: "Mental & Psych Health Assistant",
     description: "A Telegram-based mood journal. It logs user sentiment, stores it in Airtable, and uses an AI Agent to recommend Spotify playlists or meditation prompts based on the user's mood score (1-10).",
     techStack: ["Telegram Bot", "Airtable", "Spotify API", "AI Agent"],
+  },
+  {
+    icon: Bot,
+    title: "Jarvis Personal AI Assistant",
+    description: "A personal assistant that starts with an iOS Shortcut sending calendar events and reminders from my phone to an n8n webhook, which logs them in Google Sheets. It then pulls recent unread Gmail (promotions, social and spam filtered out) and sends everything to OpenAI, which writes a daily brief and picks the top priority emails. The brief goes to Telegram with links to open each email in Gmail, and any new events found in emails are added to Google Calendar, skipping ones already logged.",
+    techStack: ["iOS Shortcuts", "Webhook", "Gmail", "Google Sheets", "OpenAI", "Telegram Bot", "Google Calendar"],
   },
 ];
 
@@ -59,15 +66,28 @@ const AutomationsSection = () => {
   const [activeTab, setActiveTab] = useState<Tab>("n8n");
 
   return (
-    <section id="workflows" className="py-24 relative">
+    <section id="solutions" className="py-24 relative">
+      <style>{`
+        @keyframes automation-fade-in {
+          from { opacity: 0; transform: translateY(16px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .automation-fade-in {
+          animation: automation-fade-in 0.5s ease-out backwards;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .automation-fade-in { animation: none; }
+        }
+      `}</style>
+
       <div className="container px-4 md:px-6">
         <div className="max-w-6xl mx-auto">
           {/* Section header */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 z-10 relative">
             <h2 className="font-display text-3xl md:text-5xl font-bold mb-4">
               Automation <span className="text-gradient">Projects</span>
             </h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="text-lg z-10 max-w-2xl mx-auto">
               From intelligent AI agents to enterprise-grade pipelines — solving real business problems
               through automation.
             </p>
@@ -75,7 +95,7 @@ const AutomationsSection = () => {
 
           {/* Tabs */}
           <div className="flex justify-center mb-12">
-            <div className="inline-flex rounded-xl tech-border p-1 gap-1">
+            <div className="inline-flex rounded-xl tech-border p-1 gap-1 z-10 relative">
               <button
                 onClick={() => setActiveTab("n8n")}
                 className={`px-6 py-2.5 rounded-lg text-sm font-display font-bold transition-all ${
@@ -91,7 +111,7 @@ const AutomationsSection = () => {
                 className={`px-6 py-2.5 rounded-lg text-sm font-display font-bold transition-all ${
                   activeTab === "contextual"
                     ? "bg-secondary text-secondary-foreground shadow-md"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "hover:text-foreground"
                 }`}
               >
                 Contextual.io
@@ -102,12 +122,22 @@ const AutomationsSection = () => {
           {/* n8n tab content */}
           {activeTab === "n8n" && (
             <div className="grid md:grid-cols-2 gap-6">
-              {n8nWorkflows.map((workflow, index) => (
+              {n8nWorkflows.map((workflow, index) => {
+                // With an odd number of projects, the last card sits alone on its row.
+                // Span both columns and centre it at card width so the grid stays balanced
+                // however many workflows are added to the array.
+                const isLoneLast =
+                  n8nWorkflows.length % 2 === 1 && index === n8nWorkflows.length - 1;
+                return (
                 <div
                   key={index}
-                  className="group tech-border rounded-2xl p-6 md:p-8 card-glow relative overflow-hidden"
+                  className={`automation-fade-in group tech-border rounded-2xl p-6 md:p-8 card-glow relative overflow-hidden ${
+                    isLoneLast ? "md:col-span-2 md:w-[calc(50%_-_0.75rem)] md:mx-auto" : ""
+                  }`}
+                  style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <div className="absolute top-0 right-0 w-40 h-40 rounded-full blur-3xl opacity-0 group-hover:opacity-20 transition-opacity duration-500 bg-primary" />
+                  
                   <div className="relative z-10">
                     <div className="flex items-start gap-4 mb-4">
                       <div className="w-14 h-14 rounded-xl flex items-center justify-center shrink-0 bg-primary/10 text-primary">
@@ -127,7 +157,8 @@ const AutomationsSection = () => {
                     </div>
                   </div>
                 </div>
-              ))}
+                );
+              })}
             </div>
           )}
 
@@ -148,7 +179,11 @@ const AutomationsSection = () => {
 
               <div className="grid md:grid-cols-3 gap-6">
                 {contextualFlows.map((flow, index) => (
-                  <div key={index} className="group tech-border rounded-2xl p-6 md:p-8 card-glow relative overflow-hidden">
+                  <div
+                    key={index}
+                    className="automation-fade-in group tech-border rounded-2xl p-6 md:p-8 card-glow relative overflow-hidden"
+                    style={{ animationDelay: `${index * 100}ms` }}
+                  >
                     {index < contextualFlows.length - 1 && (
                       <div className="hidden md:block absolute top-1/2 -right-3 w-6 h-0.5 bg-gradient-to-r from-secondary/50 to-transparent z-20" />
                     )}
@@ -183,9 +218,15 @@ const AutomationsSection = () => {
           )}
 
           {/* CTA */}
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 z-10 relative">
             <Button variant="outline" size="lg" asChild>
-              <a href="#contact">
+              <a
+                href={`mailto:hello@bunmioladipupo.online?subject=${encodeURIComponent(
+                  "Project Inquiry: Workflow Automation"
+                )}&body=${encodeURIComponent(
+                  "Hi Bunmi,\n\nI'd love to discuss an automation project with you.\n\nHere are a few initial details about what I'm looking to build:\n- \n\nLooking forward to hearing from you!"
+                )}`}
+              >
                 Discuss Your Automation Needs
                 <ArrowRight className="w-4 h-4" />
               </a>
