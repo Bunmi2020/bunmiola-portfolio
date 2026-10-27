@@ -4,14 +4,16 @@ const stats = [
   {
     icon: Users,
     label: "Founder",
-    value: "Slide Study Center (goFIKO)",
+    value: "goFIKO",
     color: "text-secondary",
+    link: "https://www.gofiko.com",
   },
   {
     icon: Code,
     label: "Certified",
     value: "Front-End Engineer",
     color: "text-primary",
+    link: "https://github.com/Bunmi2020/",
   },
   {
     icon: Briefcase,
@@ -24,6 +26,7 @@ const stats = [
     label: "Background",
     value: "Mining Engineering",
     color: "text-primary",
+    link: "https://www.linkedin.com/in/bunmioladipupo/",
   },
   {
     icon: GraduationCap,
@@ -75,8 +78,17 @@ const AboutSection = () => {
                     <stat.icon className={`w-8 h-8 ${stat.color} mb-4`} />
                     <p className="text-sm text-muted-foreground mb-1">{stat.label}</p>
                     <p className="font-display font-semibold text-foreground">{stat.value}</p>
-                    {stat.link && (
-                      <p className="text-xs text-primary mt-2">View on Fiverr →</p>
+                    {stat.link && stat.label === "N8N Expert" && (
+                      <p className="text-xs text-primary mt-2">View Fiverr Profile →</p>
+                    )}
+                    {stat.link && stat.label === "Founder" && (
+                      <p className="text-xs text-primary mt-2">Visit goFIKO →</p>
+                    )}
+                    {stat.link && stat.label === "Background" && (
+                      <p className="text-xs text-primary mt-2">Check my LinkedIn →</p>
+                    )}
+                    {stat.link && stat.label === "Certified" && (
+                      <p className="text-xs text-primary mt-2">Check my GitHub →</p>
                     )}
                   </>
                 );
